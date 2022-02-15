@@ -135,7 +135,7 @@ body {
   position: absolute;
   top: 0px;
   left: 0px;
-  background-color: hsla(0, 0%, 20%, 0.7);
+  background-color: hsla(0, 0%, 20%, 0.3);
 }
 
 .prompt {
@@ -172,14 +172,5 @@ body {
 
   100% {
     top: calc(50vh - 25vmin);
-  }
-}
-@keyframes messageoutanime {
-  0% {
-    top: calc(50vh - 25vmin);
-  }
-
-  100% {
-    top: 100vh;
   }
 }

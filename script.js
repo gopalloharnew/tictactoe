@@ -84,20 +84,16 @@ for (let i = 0; i < cells.length; i++) {
 }
 
 restartButton.addEventListener("click", () => {
-  document.getElementsByClassName("prompt")[0].style.animation =
-    "messageoutanime 0.3s ease-out forwards";
-  setTimeout(() => {
-    promptbox.style.display = "none";
-    for (let i = 0; i < cells.length; i++) {
-      const cell = cells[i];
-      cell.removeEventListener("click", fillOX);
-      cell.addEventListener("click", fillOX, { once: true });
-      cell.classList.remove("x");
-      cell.classList.remove("o");
-      cell.classList.add("vacant");
-      if (turn === "o") {
-        swapTurn();
-      }
+  promptbox.style.display = "none";
+  for (let i = 0; i < cells.length; i++) {
+    const cell = cells[i];
+    cell.removeEventListener("click", fillOX);
+    cell.addEventListener("click", fillOX, { once: true });
+    cell.classList.remove("x");
+    cell.classList.remove("o");
+    cell.classList.add("vacant");
+    if (turn === "o") {
+      swapTurn();
     }
-  }, 300);
+  }
 });
